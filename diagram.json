@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "author": "Nguyen Tien Hieu",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 20, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -105.3,
+      "left": -178.2,
+      "attrs": { "temperature": "28", "humidity": "30" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledPump",
+      "top": 150,
+      "left": 253.4,
+      "attrs": { "color": "blue", "label": "MAY BOM" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledFan",
+      "top": 63.6,
+      "left": 291.8,
+      "attrs": { "color": "green", "label": "QUAT" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledMist",
+      "top": 15.6,
+      "left": 359,
+      "attrs": { "color": "red", "label": "PHUN SUONG" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 52.25,
+      "left": 161.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 109.85,
+      "left": 161.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 138.65,
+      "left": 161.8,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "esp:GND.1", "dht:GND", "black", [] ],
+    [ "dht:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht:SDA", "esp:15", "green", [ "v230.4", "h278.5", "v-38.4" ] ],
+    [ "ledMist:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "esp:23", "r1:2", "green", [ "h0" ] ],
+    [ "r1:1", "ledMist:A", "green", [ "v0", "h96" ] ],
+    [ "esp:19", "r2:2", "green", [ "h0" ] ],
+    [ "ledFan:C", "esp:GND.2", "black", [ "v0" ] ],
+    [ "r3:2", "esp:18", "green", [ "v0" ] ],
+    [ "r2:1", "ledFan:A", "green", [ "v0", "h57.6", "v28.8", "h76.8", "v-38.4" ] ],
+    [ "ledPump:A", "r3:1", "green", [ "v28.8", "h-48" ] ],
+    [ "ledPump:C", "esp:GND.2", "black", [ "v0", "h-18.8", "v-144" ] ]
+  ],
+  "dependencies": {}
+}
