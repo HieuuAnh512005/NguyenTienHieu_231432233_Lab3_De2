@@ -72,7 +72,7 @@ Broker: `broker.hivemq.com`
 
 | File | Nội dung |
 |---|---|
-| `Nguyễn Tiến Hiếu_231432233_...` (.docx, .pdf) | Báo cáo thực hành |
+| `Nguyễn Tiến Hiếu_231432233_lab3_đề2` (.docx, .pdf) | Báo cáo thực hành |
 | `sketch.ino` | Mã nguồn ESP32 |
 | `diagram.json`, `libraries.txt`, `wokwi-project.txt` | Sơ đồ mạch và cấu hình project Wokwi |
 | `index.html` | Giao diện Web Dashboard |
@@ -82,4 +82,4 @@ Broker: `broker.hivemq.com`
 
 Mô phỏng Wokwi: [Xem mô phỏng trên Wokwi](https://wokwi.com/projects/479992109740419073)
 
-Web Demo: [Xem trang web demo](https://doinucuoiem123-hue.github.io/Bao_Cao_Lab3_De2/)
+Web Demo: [Xem trang web demo](https://hieuuanh512005.github.io/Bao_Cao_Lab3_De2/)
